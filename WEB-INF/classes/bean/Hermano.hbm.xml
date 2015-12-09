@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bean.Hermano" table="hermanos">
+    
+       <id name="id_hermano" type="integer" column="hmo_id" unsaved-value="-1">
+            <generator class="sequence">
+              <param name="sequence">seq_hmo_id</param>
+            </generator>
+        </id>
+    
+        <property name="apellido"
+                  column="hmo_apellido"/>
+        
+        <property name="nombre"
+                  column="hmo_nombre"/>
+        
+        <property name="ficha"
+                  column="hmo_ficha"/>
+        
+        <many-to-one name="nacionalidad" 
+                     cascade="save-update"
+                     column="hmo_nacionalidad"/>
+        
+        <property name="numeroDoc"
+                  column="hmo_numero_doc"/>
+        
+        <property name="sexo"
+                  column="hmo_sexo"/>
+        
+        <many-to-one name="tipoDoc" cascade="save-update"
+                      column="hmo_tipo_doc"/>
+        
+    </class>
+
+</hibernate-mapping>

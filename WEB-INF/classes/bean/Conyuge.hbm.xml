@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bean.Conyuge" table="conyuge">
+    
+   <!--
+        <id name="id_conyuge" type="integer" column="cne_id" unsaved-value="-1">
+            <generator class="sequence">
+              <param name="sequence">seq_cne_id</param>
+            </generator>
+        </id>
+        
+   -->
+        
+        <id name="ficha" column="cne_ficha" unsaved-value="-1">
+            <generator class="foreign">
+               <param name="property">agente</param>
+            </generator>
+        </id>
+        
+       <one-to-one name="agente" class="bean.Agente" constrained="true"/>
+         
+ <!--
+        <property name="ficha"
+                  column="cne_ficha"/>    
+ -->
+        <property name="apellido"
+                  column="cne_apellido"/>
+        
+        <property name="nombre"
+                  column="cne_nombre"/>
+        
+		<property name="fechaNacimiento"
+		          column="cne_fecha_nacimiento"
+		          type="date"/>
+
+        <many-to-one name="nacionalidad" 
+                     cascade="save-update"
+                     column="cne_nacionalidad"/>
+        
+		<property name="trabaja"
+		          column="cne_trabaja"/>
+		          
+		<property name="dondeTrabaja"
+		          column="cne_donde_trabaja"/>		          
+
+		<property name="trabajaDesde"
+		          column="cne_trabaja_desde"
+		          type="date"/>
+		          
+	<!--
+		<property name="ficha_conyuge"
+		          column="cne_ficha_conyuge"/>		 
+-->
+    </class>
+
+</hibernate-mapping>

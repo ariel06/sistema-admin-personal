@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="bean.Agente" table="agente">
+
+        <id name="ficha" type="integer" column="age_ficha">
+            <generator class="assigned"/>
+        </id>
+
+        <property name="numero_ficha"
+        		  column="age_numero_ficha"
+        		  type="integer"/>
+        
+	    <!-- Mapeo de las colecciones: Licencias, hijos, hermanos, etc -->
+
+            <set name="licencias" table="inasistencias_licencias" cascade="save-update">
+               <key column="ina_ficha"/>
+               <one-to-many class="bean.Licencia"/>
+            </set>
+          
+            <set name="hijos" table="hijos" cascade="save-update">
+               <key column="hjs_ficha"/>
+               <one-to-many class="bean.Hijo"/>
+            </set>
+            
+            <set name="hermanos" table="hermanos" cascade="save-update">
+               <key column="hmo_ficha"/>
+               <one-to-many class="bean.Hermano"/>
+            </set>
+          
+        <!-- fin colecciones -->
+    
+       <one-to-one  name="conyuge" class="bean.Conyuge" cascade="save-update"/>
+
+
+        <property name="nivel"
+        		  column="age_nivel"/>
+        		  
+        <property name="grado"
+        		  column="age_grado"
+        		  not-null="false"/>
+        		  
+     <!--   <property name="funcion"
+        		  column="age_funcion"/>
+     -->
+     
+     <many-to-one name="funcion" cascade="save-update"
+                         column="age_funcion"/>
+        		  
+		<property name="fecha_ingreso_mun"
+		   		  column="age_fecha_ingreso_municipalidad"
+		   		  type="date"/>
+        		  
+        <property name="fecha_ingreso_dgcem"
+        		  column="age_fecha_ingreso_dgcem"
+        		  type="date"/>
+        		  
+        <property name="guardia"
+        		  column="age_guardia"/>
+
+        <property name="inhabilitado"
+        		  column="age_inhabilitado"/>
+            
+                                   
+        <property name="empleo_publico"
+        		  column="age_empleo_publico"/>
+        
+        <property name="sueldo_bruto"
+        		  column="age_sueldo_bruto"/>
+        		  
+        <property name="hora_desde"
+                  column="age_hora_desde"/>
+        		  
+        <property name="hora_hasta"
+                  column="age_hora_hasta"/>        
+        		  
+        <property name="fecha_actual"
+        		  column="age_fecha_actual"
+        		  type="date"/>
+        		  
+       <!-- Datos personales -->
+         
+            <property name="apellido_paterno"
+           			  column="age_apellido_paterno"
+           			  not-null="true"/>
+          			
+            <property name="apellido_materno"
+           			  column="age_apellido_materno"/>          
+
+            <property name="nombres"
+          		  	  column="age_nombres"
+          			  not-null="true"/>                    
+
+		    <property name="sexo"
+		              column="age_sexo"/>
+		            
+            <property name="fecha_nacimiento"
+                      column="age_fecha_nacimiento"
+                      type="date"/>
+                    
+            <many-to-one name="tipo_doc" cascade="all"
+                         column="age_tipo_documento"/>
+		            
+  		    <property name="numero_doc"
+		              column="age_numero_doc"/>
+		          
+		    <property name="cuil"
+		              column="age_cuil"/>          
+				          
+            <many-to-one name="nacionalidad" cascade="save-update"
+                         column="age_nacionalidad"/>
+                         
+            <property name="fecha_radicacion"
+                      column="age_fecha_radicacion"
+                      type="date"/>
+                      
+            <property name="telefono"
+                      column="age_tel"/>
+                      
+            <many-to-one name="estado_civil" cascade="save-update"
+                         column="age_estado_civil"/>
+                         
+            <property name="fecha_casado"
+                      column="age_fecha_casado"
+                      type="date"/>
+                      
+           <property name="apellido_casada"
+          			 column="age_apellido_casada"/>
+
+       <!-- fin datos personales -->
+       
+       <!-- Domicilio -->
+       
+           <property name="calle"
+          			 column="age_dom_calle"/>
+          			 
+           <property name="numero_dom"
+                     column="age_dom_numero"/>
+           
+           <property name="piso"
+                     column="age_dom_piso"/>
+           
+           <property name="depto"
+                     column="age_dto"/>
+           
+           <property name="localidad"
+                     column="age_localidad"/>
+           
+           <property name="provincia"
+                     column="age_provincia"/>
+           
+           <property name="pais"
+                     column="age_pais"/>
+                     
+       <!-- fin domicilio -->
+       
+       <!-- Otros -->
+
+ <many-to-one name="cementerio" cascade="save-update"
+                         column="age_cementerio"/>
+           <property name="posee_vehiculo"
+                     column="age_posee_vehiculo"/>
+                     
+           <property name="conduce_vehiculo"
+                     column="age_conduce_vehiculo"/>
+         <!--            
+           <property name="numero_reg"
+                     column="age_numero_registro"
+                     type="integer"/>
+            -->         
+           <property name="observaciones"
+                     column="age_observaciones"/>
+       
+       <!-- fin otros -->       
+        		  
+    </class>
+
+</hibernate-mapping>

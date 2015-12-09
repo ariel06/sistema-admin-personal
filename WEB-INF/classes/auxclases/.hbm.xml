@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="bean.Funciones" table="funciones">
+
+        <id name="id" type="integer" column="fun_id">
+        </id>
+        
+		<property name="menu" length="2"
+                  column="fun_menu"/>
+
+        <property name="descripcion"
+                  column="fun_descripcion"/>
+                  
+        <property name="url"
+                  column="fun_url"/>
+                            
+    </class>
+
+</hibernate-mapping>
+

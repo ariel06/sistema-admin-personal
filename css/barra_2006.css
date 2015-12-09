@@ -1,0 +1,163 @@
+#barra {
+	Z-INDEX: 100; BACKGROUND-IMAGE: url(../imagenes/fdo_barra_tile.gif); MARGIN-BOTTOM: 1px; WIDTH: 779px; BACKGROUND-REPEAT: repeat-x; POSITION: relative; HEIGHT: 31px;
+}
+#barraizq {
+	BACKGROUND-IMAGE: url(../imagenes/fdo_barra_izq.gif); WIDTH: 7px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 31px; position:absolute; left: 0px;
+}
+#barrader {
+	LEFT: 516px; BACKGROUND-IMAGE: url(../imagenes/fdo_barra_der.gif); WIDTH: 7px; BACKGROUND-REPEAT: no-repeat; POSITION: relative; TOP: -1px; HEIGHT: 31px
+}
+#botones {
+	LEFT: 10px; POSITION: absolute; TOP: 1px
+}
+#btn_home {
+	LEFT: 0px; POSITION: absolute; TOP: 0px
+}
+#btn_listados {
+	LEFT: 86px; POSITION: absolute; TOP: 0px
+}
+#btn_actualizacion {
+	LEFT: 120px; POSITION: absolute; TOP: 0px
+}
+#btn_agentes {
+	LEFT: 172px; POSITION: absolute; TOP: 0px
+}
+#btn_licencias {
+	LEFT: 258px; POSITION: absolute; TOP: 0px
+}
+#btn_contrasenia {
+	LEFT: 344px; POSITION: absolute; TOP: 0px
+}
+#btn_ayuda {
+	LEFT: 430px; POSITION: absolute; TOP: 0px
+}
+#menu1 {
+	LEFT: 172px; WIDTH: 140px; LIST-STYLE-TYPE: none; POSITION: absolute; TOP: 27px
+}
+#menu2 {
+	LEFT: 96px; WIDTH: 140px; LIST-STYLE-TYPE: none; POSITION: absolute; TOP: 27px
+}
+#menu3 {
+	LEFT: 182px; WIDTH: 140px; LIST-STYLE-TYPE: none; POSITION: absolute; TOP: 27px
+}
+#menu4 {
+	LEFT: 268px; WIDTH: 140px; LIST-STYLE-TYPE: none; POSITION: absolute; TOP: 27px
+}
+#menu5 {
+	LEFT: 354px; WIDTH: 140px; LIST-STYLE-TYPE: none; POSITION: absolute; TOP: 27px
+}
+#menu6 {
+	LEFT: 440px; WIDTH: 140px; LIST-STYLE-TYPE: none; POSITION: absolute; TOP: 27px
+}
+#menues OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #f5f5f5; VISIBILITY: hidden; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#menues OL LI {
+	BORDER-RIGHT: #c2c2c2 1px solid; PADDING-LEFT: 8px; FONT-SIZE: 10pt; PADDING-BOTTOM: 2px; BORDER-LEFT: #c2c2c2 1px solid; LINE-HEIGHT: 16px; PADDING-TOP: 4px; BORDER-BOTTOM: #c2c2c2 1px solid; FONT-FAMILY: arial, sans-serif
+}
+
+#menues OL LI A {
+	COLOR: #4a4a4a; TEXT-DECORATION: none
+}
+
+/*
+#barrader {
+	RIGHT: -431px; BACKGROUND-IMAGE: url(http://imagenes.argentina.com/header/fdo_barra_der2.gif); WIDTH: 108px; BACKGROUND-REPEAT: no-repeat; POSITION: absolute; TOP: 116px; HEIGHT: 31px
+}
+#busq_header {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; RIGHT: 8px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; POSITION: absolute; TOP: 3px
+}
+
+#barrader P {
+	MARGIN-TOP: 7px; FONT-WEIGHT: bold; FONT-SIZE: 11px; MARGIN-LEFT: 18px; COLOR: #515151; FONT-FAMILY: arial
+}
+#busq_header .busq_text {
+	FONT-SIZE: 9px; WIDTH: 188px
+}
+
+.fixedfont {
+	FONT-SIZE: 11px
+}
+
+#fecha {
+	DISPLAY: inline; LINE-HEIGHT: 28px; MARGIN-RIGHT: 5px
+}
+#hora {
+	DISPLAY: inline; LINE-HEIGHT: 28px; MARGIN-RIGHT: 5px
+}
+#txt_banner {
+	DISPLAY: inline; LINE-HEIGHT: 28px; MARGIN-RIGHT: 5px
+}
+#hora {
+	MARGIN-LEFT: 5px
+}
+
+#clima {
+	RIGHT: 0px; MARGIN-LEFT: 5px; POSITION: absolute; TOP: 0px
+}
+
+#txt_banner {
+	FONT-WEIGHT: bold; MARGIN-LEFT: 30px; COLOR: #024490; TEXT-DECORATION: underline
+}
+
+#icono_clima {
+	VERTICAL-ALIGN: middle
+}
+
+#fecha_clima {
+	FONT-SIZE: 10px; Z-INDEX: 10; MARGIN-BOTTOM: 6px; MARGIN-LEFT: 8px; WIDTH: 762px; COLOR: #606060; BORDER-BOTTOM: #ededed 1px solid; FONT-FAMILY: arial, sans-serif; POSITION: relative
+}
+
+#fecha_clima A {
+	FONT-WEIGHT: bold; COLOR: #5186c2; TEXT-DECORATION: none
+}
+
+#form_barrita {
+	DISPLAY: inline; MARGIN: 0px
+}
+
+#form_barrita SELECT {
+	FONT: 10px Tahoma; HEIGHT: 15px
+}
+
+
+#logo_2006 {
+	MARGIN-TOP: 12px; MARGIN-BOTTOM: 9px; MARGIN-LEFT: 12px
+}
+
+#banner_2006 {
+	RIGHT: 8px; POSITION: absolute; TOP: 4px
+}
+
+#img_banner {
+	MARGIN-TOP: 6px; MARGIN-BOTTOM: 6px; MARGIN-LEFT: 90px
+}
+
+#pie {
+	MARGIN-TOP: 8px; BACKGROUND-IMAGE: url(http://imagenes.argentina.com/header/fdo_barra_tile.gif); WIDTH: 779px; BACKGROUND-REPEAT: repeat-x; POSITION: relative; HEIGHT: 31px
+}
+
+
+#pieizq {
+	BACKGROUND-IMAGE: url(http://imagenes.argentina.com/header/fdo_barra_izq.gif); WIDTH: 7px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 31px
+}
+
+#pieder {
+	RIGHT: -1px; BACKGROUND-IMAGE: url(http://imagenes.argentina.com/header/fdo_pie_der.gif); WIDTH: 9px; BACKGROUND-REPEAT: no-repeat; POSITION: absolute; TOP: 0px; HEIGHT: 31px
+}
+
+#linkspie {
+	LEFT: 4px; WIDTH: 779px; POSITION: absolute; TOP: 0px; TEXT-ALIGN: center
+}
+#linkspie {
+	PADDING-LEFT: 8px; FONT-SIZE: 10px; PADDING-BOTTOM: 2px; COLOR: #4f4f4f; FONT-FAMILY: arial, sans-serif; TEXT-DECORATION: none
+}
+#linkspie A {
+	PADDING-LEFT: 8px; FONT-SIZE: 10px; PADDING-BOTTOM: 2px; COLOR: #4f4f4f; FONT-FAMILY: arial, sans-serif; TEXT-DECORATION: none
+}
+.piepie {
+	MARGIN-TOP: 4px; FONT-SIZE: 11px; MARGIN-BOTTOM: 8px; COLOR: #4f4f4f; FONT-FAMILY: arial, sans-serif; TEXT-ALIGN: center
+}
+#txt_banner A {
+	COLOR: #0353ae; TEXT-DECORATION: underline
+}*/

@@ -1,0 +1,63 @@
+<hibernate-configuration>
+  <session-factory>
+    <!-- Database connection settings -->
+    <!--
+      <property name="connection.datasource">java:comp/env/jdbc/personal</property>
+      <property name="show_sql">true</property>z
+      <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+	  <property name="connection.release_mode">after_transaction</property>
+-->
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+
+ <!-- Url del servidor
+    <property name="connection.url">jdbc:postgresql://localhost:5432/personal</property>
+ -->
+
+
+ <!--  correr desde TEST  -->
+        
+  <property name="connection.url">jdbc:postgresql://10.23.4.115:5432/backup_per</property>
+     <property name="connection.username">personal</property>
+  <property name="connection.password">perso</property>
+
+         
+          
+ <!-- correr desde servidor
+ 
+  <property name="connection.url">jdbc:postgresql://localhost:5432/personal</property>
+  <property name="connection.username">personal</property>
+  <property name="connection.password">perso</property>
+
+-->
+
+  
+
+
+    <property name="hibernate.default_batch_fetch_size">8</property>
+    <property name="hibernate.connection.release_mode">after_transaction</property>
+    <!-- JDBC connection pool (use the built-in) -->
+    <property name="connection.pool_size">30</property>
+    <!-- SQL dialect -->
+    <!--<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>-->
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
+    <!-- Disable the second-level cache  -->
+    <!-- Echo all executed SQL to stdout -->
+    <!--<property name="show_sql">true</property>-->
+    <mapping resource="bean/Licencia.hbm.xml"/>
+    <mapping resource="bean/Agente.hbm.xml"/>
+    <mapping resource="bean/Hijo.hbm.xml"/>
+    <mapping resource="bean/Hermano.hbm.xml"/>
+    <mapping resource="bean/Conyuge.hbm.xml"/>
+    <mapping resource="bean/Usuario.hbm.xml"/>
+    <mapping resource="bean/Perfil.hbm.xml"/>
+    <mapping resource="bean/Funciones.hbm.xml"/>
+    <mapping resource="auxclases/Nacionalidad.hbm.xml"/>
+    <mapping resource="auxclases/MotivoLicencia.hbm.xml"/>
+    <mapping resource="auxclases/TipoDocumento.hbm.xml"/>
+    <mapping resource="auxclases/EstadoCivil.hbm.xml"/>
+    <mapping resource="auxclases/Funcion.hbm.xml"/>
+    <mapping resource="auxclases/Cementerio.hbm.xml"/>
+    <mapping resource="auxclases/Detalles_inhabilitado.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

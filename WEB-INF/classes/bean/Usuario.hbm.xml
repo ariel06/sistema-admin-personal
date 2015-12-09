@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="bean.Usuario" table="usuario">
+
+        <id name="id" type="integer" column="usu_id">
+        <generator class="assigned"/>
+        </id>
+        
+        <property name="nombre"
+                  column="usu_nombre"/>
+        
+        <property name="apellido"
+                  column="usu_apellido"/>
+                  
+        <property name="nombre_usuario" 
+                  column="usu_nombre_usuario"/>
+                  
+        <property name="clave"
+                  column="usu_clave"/>
+        <many-to-one name="perfil" cascade="save-update"
+                           lazy="false"
+                           column="usu_per_id"/>
+     
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="bean.Perfil" table="perfil">
+
+        <id name="id" type="integer" column="per_id">
+        </id>
+        
+        <property name="descripcion"
+                  column="per_descripcion"/>
+                  
+        <set name="funciones" table="perfil_funcion" lazy="false">
+            <key column="pfn_per_id"/>
+            <many-to-many column="pfn_fun_id" class="bean.Funciones"/>
+        </set>          
+        
+       
+       
+       <!--   <one-to-one name="perfil" class="bean.Perfil" column="usu_per_id" not-null="true"
+        			 insert="false" update="false"/>
+-->
+    </class>
+
+</hibernate-mapping>

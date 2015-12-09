@@ -1,0 +1,8 @@
+Date hoy = new Date(System.currentTimeMillis());
+String fecha_actual=(hoy.getYear()+1900)+"-"+(hoy.getMonth()+1)+"-"+hoy.getDay();
+String mes_anterior=(hoy.getYear()+1900)+"-"+(hoy.getMonth())+"-"+hoy.getDay();
+String mes_siguiente=(hoy.getYear()+1900)+"-"+(hoy.getMonth()+2)+"-"+hoy.getDay();
+String consulta = "from Licencia where ficha=100 "+
+		  "and ((fecha_desde>='"+fecha_actual+"') or (fecha_desde>='"+mes_anterior+"' and fecha_hasta<='"+mes_siguiente+"'))"+
+		  "order by fecha_desde asc";
+List lista = s.createQuery(consulta).list();

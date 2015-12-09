@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="bean.Licencia" table="inasistencias_licencias" >
+
+        <id name="id" type="integer" column="ina_id" unsaved-value="-1">
+            <generator class="sequence">
+              <param name="sequence">seq_ina_lic</param>
+            </generator>
+        </id>
+        
+        <property name="ficha"
+                  column="ina_ficha"/>
+        
+        <property name="duracion"
+                  column="ina_duracion"/>
+                  
+        <many-to-one name="motivo" cascade="all"
+                  column="ina_motivo"/>
+                  
+        <property name="con_sueldo"
+                  column="ina_con_sin_sueldo"/>
+              
+        <property name="fecha_desde"
+                  column="ina_fecha_desde"
+                  type="date"/>
+                  
+        <property name="fecha_hasta"
+                  column="ina_fecha_hasta"
+                  type="date"/>
+                  
+        <property name="observaciones"
+                  column="ina_observaciones"/>
+        
+        <many-to-one name="agente" class="bean.Agente" column="ina_ficha" not-null="true"
+        			 insert="false" update="false"/>
+
+    </class>
+
+</hibernate-mapping>

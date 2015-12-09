@@ -1,0 +1,111 @@
+
+        .box-header
+        {
+                color: #000000; background-color: #DCDCDC; background-repeat: repeat-x;
+                font-size: 16px; font-weight: bold; padding: 1px 0.5em;
+                border-bottom: 2px solid #000; border-top:1px solid #000;
+                border-left: 1px solid #000; border-right: 1px solid #000;
+                text-transform: capitalize; width:620px
+        }
+
+        .box-body
+        {
+                padding: 2px; background-color: #ffffff; background-repeat: repeat-x;
+                font-size:14px; Padding-bottom: 0.5cm; Padding-top: 0.2cm;
+        }
+
+        .td_reporte
+        {
+                border-bottom: thin none #000; font-size:14px; text-align:center;
+        }
+
+        .th_reporte
+        {
+                Padding-left:1cm; Padding-right: 1cm;
+                border-top: 1px solid #000; border-bottom: 1px solid #000;
+                border-right: 1px solid #000; border-left: 1px solid #000;
+        }
+
+	    .titulo
+	    {
+                color: #000000; background-color: #ffffff;
+                font-size: 16px; font-weight: bold; padding: 1px 0.5em;
+                border-bottom: 3px solid #000; width:620px
+	    }
+	
+td { 
+    font-family:verdana,arial; 
+    font-size:8pt; 
+} 
+.estilotabla{
+	background-color:ffffff;
+	border-style:solid;
+	border-color:666666;
+	border-width:1px;
+	height: auto;
+	width: auto;	
+} 
+.estilocelda{ 
+    background-color:ddeeff; 
+    color: #000000; 
+    font-weight: bold; 
+    font-size: 14px; 
+} 
+.cuerpo{ 
+background-color:#FFFFFF;
+ font-family : arial;
+ color : White;
+  border-bottom:'border-bottom-width' 'border-bottom-style' 'border-bottom-color';
+  font-size : 10pt;
+ text-decoration : underline;
+ text-align : center;
+
+}
+.cuerpo1{ 
+background-color:#FFFFFF;
+ font-family : arial;
+ color : White;
+  border-bottom:'border-bottom-width' 'border-bottom-style' 'border-bottom-color';
+  font-size : 10pt;
+
+}
+ .titulo1
+	    {
+                color: #000000; 
+                background-color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+                width:620px
+	    }
+
+
+
+
+.unnamed {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	background-color: #FFFFFF;
+	border: thin none #000000;
+}
+.unnamed1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 4mm;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	background-color: #FFFFFF;
+	border: thin none #000000;
+}
+.button {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	margin: auto;
+	
+}

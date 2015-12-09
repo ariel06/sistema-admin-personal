@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="auxclases.TipoDocumento" table="tipo_documento">
+
+        <id name="cod_tipo_documento" type="integer" column="tdo_cod_documento" unsaved-value="-1">
+            <generator class="sequence">
+              <param name="sequence">seq_tdo_cod</param>
+            </generator>
+        </id>
+        
+        <property name="desc_tipo_documento"
+                  column="tdo_desc_documento"
+                  unique="true"
+                  not-null="true"/>
+
+    </class>
+
+</hibernate-mapping>

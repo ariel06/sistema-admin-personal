@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="auxclases.MotivoLicencia" table="motivos_licencia">
+
+         <id name="id_motivo" type="integer" column="mis_id" unsaved-value="-1">
+            <generator class="sequence">
+              <param name="sequence">seq_mis_id</param>
+            </generator>
+        </id>
+        
+        <property name="descripcion"
+                  column="mis_desc_motivo"
+                  unique="true"
+                  not-null="true"/>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="auxclases.DetallesInhabilitacion" table="detalles_inhabilitacion">
+
+
+
+         <id name="det_id" type="integer" column="det_id" unsaved-value="-1">
+            <generator class="sequence">
+              <param name="sequence">seq_hjs_id</param>
+            </generator>
+        </id>
+
+        <property name="det_usuario"
+                  column="det_usuario"/>
+
+        <property name="det_ficha"
+                  column="det_ficha"/>
+
+                  <property name="det_agente_apellido"
+                  column="det_agente_apellido"/>
+
+                  <property name="det_agente_nombre"
+                  column="det_agente_nombre"/>
+
+                 <property name="det_fecha_inhabilitado"
+                  column="det_fecha_inhabilitado"/>
+                  
+                     <property name="det_fecha_sistema"
+                  column="det_fecha_sistema"/>
+         
+
+                  <property name="det_motivo"
+                  column="det_motivo"/>
+
+                  <property name="det_operacion"
+                  column="det_operacion"/>
+
+                   <property name="det_observaciones"
+                  column="det_observaciones"/>
+
+
+     
+
+
+    </class>
+
+</hibernate-mapping>

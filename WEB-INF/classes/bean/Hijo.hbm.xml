@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bean.Hijo" table="hijos">
+    
+       <id name="id_hijo" type="integer" column="hjs_id" unsaved-value="-1">
+            <generator class="sequence">
+              <param name="sequence">seq_hjs_id</param>
+            </generator>
+        </id>
+    
+        <property name="apellido"
+                  column="hjs_apellido"/>
+        
+        <property name="nombre"
+                  column="hjs_nombre"/>
+        
+        <property name="fechaNacimiento"
+                  column="hjs_fecha_nacimiento"
+                  type="date"/>
+        
+        <property name="ficha"
+                  column="hjs_ficha"/>
+        
+        <many-to-one name="nacionalidad" 
+                     cascade="save-update"
+                     column="hjs_nacionalidad"/>
+        
+        <property name="numeroDoc"
+                  column="hjs_numero_doc"/>
+        
+        <property name="sexo"
+                  column="hjs_sexo"/>
+        
+        <many-to-one name="tipoDoc" cascade="save-update"
+                      column="hjs_tipo_doc"/>
+        
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="auxclases.EstadoCivil" table="estado_civil">
+
+        <id name="cod_estado_civil" type="integer" column="eol_cod" unsaved-value="-1">
+            <generator class="sequence">
+              <param name="sequence">seq_eol_cod</param>
+            </generator>
+        </id>
+        
+        <property name="desc_estado_civil"
+                  column="eol_desc"
+                  unique="true"
+                  not-null="true"/>
+
+    </class>
+
+</hibernate-mapping>
